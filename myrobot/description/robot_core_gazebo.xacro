@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
+
+    <xacro:property name="Silver" value="Gazebo/Silver" />
+    <xacro:property name="Red" value="Gazebo/Red" />
+    <xacro:property name="Blue" value="Gazebo/Blue" />
+    <xacro:property name="Gray" value="Gazebo/Gray" />
+    <xacro:property name="White" value="Gazebo/White" />
+    <xacro:property name="Green" value="Gazebo/Green" />
+    <xacro:property name="Black" value="Gazebo/Black" />
+    <xacro:property name="Orange" value="Gazebo/Orange" />
+
+    <gazebo reference="chassis_link">
+        <material>${Orange}</material>
+        <self_collide>true</self_collide>
+        <gravity>true</gravity>
+    </gazebo>
+    <gazebo reference="FRC_link">
+        <material>${Gray}</material>
+        <mu1 value="0.5"/>
+        <mu2 value="0.5"/>
+    </gazebo>
+    <gazebo reference="FLC_link">
+        <material>${Gray}</material>
+        <mu1 value="0.5"/>
+        <mu2 value="0.5"/>
+    </gazebo>
+    <gazebo reference="BRC_link">
+        <material>${Gray}</material>
+        <mu1 value="0.5"/>
+        <mu2 value="0.5"/>
+    </gazebo>
+    <gazebo reference="BLC_link">
+        <material>${Gray}</material>
+        <mu1 value="0.5"/>
+        <mu2 value="0.5"/>
+    </gazebo>
+
+
+    <gazebo reference="LD_link">
+        <material>${Black}</material>
+        <mu1 value="0.5"/>
+        <mu2 value="0.5"/>
+        <self_collide>true</self_collide>
+    </gazebo>
+
+    <gazebo reference="RD_link">
+        <material>${Black}</material>
+        <mu1 value="0.5"/>
+        <mu2 value="0.5"/>
+        <self_collide>true</self_collide>
+    </gazebo>
+    
+   <gazebo reference="Lidar_link">
+        <material>Gazebo/Black</material>
+
+        <sensor name="laser" type="ray">
+            <pose> 0 0 0 0 0 0 </pose>
+            <visualize>false</visualize>
+            <update_rate>10</update_rate>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>360</samples>
+                        <min_angle>-3.14</min_angle>
+                        <max_angle>3.14</max_angle>
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.3</min>
+                    <max>12</max>
+                </range>
+            </ray>
+            <plugin name="laser_controller" filename="libgazebo_ros_ray_sensor.so">
+                <ros>
+                    <argument>~/out:=scan</argument>
+                </ros>
+                <output_type>sensor_msgs/LaserScan</output_type>
+                <frame_name>Lidar_link</frame_name>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+    <gazebo reference="base_link">
+        <gravity>true</gravity>
+        <sensor name="imu_sensor" type="imu">
+        <always_on>true</always_on>
+        <update_rate>100</update_rate>
+        <visualize>true</visualize>
+        <topic>__default_topic__</topic>
+        <imu>
+        <angular_velocity>
+            <noise type="gaussian">
+            <mean>0.0</mean>
+            <stddev>0.0001</stddev>
+            </noise>
+        </angular_velocity>
+        <linear_acceleration>
+            <noise type="gaussian">
+            <mean>0.0</mean>
+            <stddev>0.0001</stddev>
+            </noise>
+        </linear_acceleration>
+        </imu>
+        <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+            <topicName>imu</topicName>
+            <bodyName>imu_link</bodyName>
+            <updateRateHZ>100.0</updateRateHZ>
+            <gaussianNoise>0.0</gaussianNoise>
+            <xyzOffset>0 0 0</xyzOffset>
+            <rpyOffset>0 0 0</rpyOffset>
+            <frameName>imu_link</frameName>
+            <initial_orientation_as_reference>false</initial_orientation_as_reference>
+        </plugin>
+        <pose>0 0 0 0 0 0</pose>
+        </sensor>
+    </gazebo>
+
+
+    <!-- <gazebo>
+        <plugin name="gazebo_ros2_base_control" filename="libgazebo_ros_diff_drive.so" >
+            <parameters>$(find myrobot)/config/ros2_controllers.yaml</parameters>
+            <left_joint>LD_joint</left_joint>
+            <right_joint>RD_joint</right_joint>
+            <wheel_separation>0.5</wheel_separation>
+            <wheel_diameter>0.1</wheel_diameter>
+
+            <max_wheel_torque>96.25</max_wheel_torque>
+            <max_wheel_acceleration>1.5</max_wheel_acceleration>
+
+            <frame_id>odom</frame_id>
+            <child_frame_id>base_link</child_frame_id>
+
+            <publish_odom>true</publish_odom>
+            <publish_odom_tf>true</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+            
+        </plugin>
+    </gazebo> -->
+
+</robot>

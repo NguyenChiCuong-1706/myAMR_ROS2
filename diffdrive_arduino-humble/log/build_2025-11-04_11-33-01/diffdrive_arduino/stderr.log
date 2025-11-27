@@ -1,0 +1,9 @@
+In file included from [01m[K/home/cuong/diffdrive_arduino-humble/hardware/include/diffdrive_arduino/diffbot_system.hpp:34[m[K,
+                 from [01m[K/home/cuong/diffdrive_arduino-humble/hardware/diffbot_system.cpp:15[m[K:
+[01m[K/home/cuong/diffdrive_arduino-humble/hardware/include/diffdrive_arduino/arduino_comms.hpp:7:10:[m[K [01;31m[Kfatal error: [m[Klibserial/SerialPort.h: No such file or directory
+    7 | #include [01;31m[K<libserial/SerialPort.h>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/diffdrive_arduino.dir/build.make:76: CMakeFiles/diffdrive_arduino.dir/hardware/diffbot_system.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/diffdrive_arduino.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

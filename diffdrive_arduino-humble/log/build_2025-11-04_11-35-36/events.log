@@ -1,0 +1,93 @@
+[0.000000] (-) TimerEvent: {}
+[0.000320] (diffdrive_arduino) JobQueued: {'identifier': 'diffdrive_arduino', 'dependencies': OrderedDict()}
+[0.000520] (diffdrive_arduino) JobStarted: {'identifier': 'diffdrive_arduino'}
+[0.007501] (diffdrive_arduino) JobProgress: {'identifier': 'diffdrive_arduino', 'progress': 'cmake'}
+[0.008126] (diffdrive_arduino) JobProgress: {'identifier': 'diffdrive_arduino', 'progress': 'build'}
+[0.008577] (diffdrive_arduino) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cuong/diffdrive_arduino-humble/build/diffdrive_arduino', '--', '-j12', '-l12'], 'cwd': '/home/cuong/diffdrive_arduino-humble/build/diffdrive_arduino', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cuong'), ('LC_TIME', 'lzh_TW'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cuong'), ('OLDPWD', '/home/cuong'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'lzh_TW'), ('SYSTEMD_EXEC_PID', '1765'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cuong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cuong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cuong-Dell-G15-5511:@/tmp/.ICE-unix/1736,unix/cuong-Dell-G15-5511:/tmp/.ICE-unix/1736'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'lzh_TW'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/68eb0eb5_e403_410b_8743_fe6e0c7fb97d'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'lzh_TW'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.QC1EF3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.144'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'lzh_TW'), ('QT_ACCESSIBILITY', '1'), ('myrobot', '/home/cuong/ros2_ws/src/myrobot'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', ':/home/cuong/ros2_ws/src/myrobot'), ('LC_MEASUREMENT', 'lzh_TW'), ('LC_IDENTIFICATION', 'lzh_TW'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cuong/diffdrive_arduino-humble/build/diffdrive_arduino'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'lzh_TW'), ('LC_PAPER', 'lzh_TW'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.059745] (diffdrive_arduino) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/diffdrive_arduino.dir/hardware/diffbot_system.cpp.o\x1b[0m\n'}
+[0.099662] (-) TimerEvent: {}
+[0.200035] (-) TimerEvent: {}
+[0.300403] (-) TimerEvent: {}
+[0.400769] (-) TimerEvent: {}
+[0.501305] (-) TimerEvent: {}
+[0.601678] (-) TimerEvent: {}
+[0.702030] (-) TimerEvent: {}
+[0.802402] (-) TimerEvent: {}
+[0.902728] (-) TimerEvent: {}
+[1.003228] (-) TimerEvent: {}
+[1.103657] (-) TimerEvent: {}
+[1.204048] (-) TimerEvent: {}
+[1.304380] (-) TimerEvent: {}
+[1.404730] (-) TimerEvent: {}
+[1.505063] (-) TimerEvent: {}
+[1.605425] (-) TimerEvent: {}
+[1.705775] (-) TimerEvent: {}
+[1.806356] (-) TimerEvent: {}
+[1.906782] (-) TimerEvent: {}
+[2.007154] (-) TimerEvent: {}
+[2.107615] (-) TimerEvent: {}
+[2.208111] (-) TimerEvent: {}
+[2.308636] (-) TimerEvent: {}
+[2.408999] (-) TimerEvent: {}
+[2.509300] (-) TimerEvent: {}
+[2.609914] (-) TimerEvent: {}
+[2.711508] (-) TimerEvent: {}
+[2.811958] (-) TimerEvent: {}
+[2.912463] (-) TimerEvent: {}
+[3.012901] (-) TimerEvent: {}
+[3.113408] (-) TimerEvent: {}
+[3.213840] (-) TimerEvent: {}
+[3.241085] (diffdrive_arduino) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libdiffdrive_arduino.so\x1b[0m\n'}
+[3.313991] (-) TimerEvent: {}
+[3.414508] (-) TimerEvent: {}
+[3.471863] (diffdrive_arduino) StdoutLine: {'line': b'[100%] Built target diffdrive_arduino\n'}
+[3.483468] (diffdrive_arduino) CommandEnded: {'returncode': 0}
+[3.484294] (diffdrive_arduino) JobProgress: {'identifier': 'diffdrive_arduino', 'progress': 'install'}
+[3.493449] (diffdrive_arduino) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cuong/diffdrive_arduino-humble/build/diffdrive_arduino'], 'cwd': '/home/cuong/diffdrive_arduino-humble/build/diffdrive_arduino', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cuong'), ('LC_TIME', 'lzh_TW'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/cuong'), ('OLDPWD', '/home/cuong'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'lzh_TW'), ('SYSTEMD_EXEC_PID', '1765'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cuong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cuong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/cuong-Dell-G15-5511:@/tmp/.ICE-unix/1736,unix/cuong-Dell-G15-5511:/tmp/.ICE-unix/1736'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'lzh_TW'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/68eb0eb5_e403_410b_8743_fe6e0c7fb97d'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'lzh_TW'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.QC1EF3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.144'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'lzh_TW'), ('QT_ACCESSIBILITY', '1'), ('myrobot', '/home/cuong/ros2_ws/src/myrobot'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', ':/home/cuong/ros2_ws/src/myrobot'), ('LC_MEASUREMENT', 'lzh_TW'), ('LC_IDENTIFICATION', 'lzh_TW'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cuong/diffdrive_arduino-humble/build/diffdrive_arduino'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'lzh_TW'), ('LC_PAPER', 'lzh_TW'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[3.501960] (diffdrive_arduino) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.502500] (diffdrive_arduino) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[3.502897] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino//diffdrive_arduino.xml\n'}
+[3.512784] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/arduino_comms.hpp\n'}
+[3.514613] (-) TimerEvent: {}
+[3.521572] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/diffbot_system.hpp\n'}
+[3.530655] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/visibility_control.h\n'}
+[3.540188] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/include/diffdrive_arduino/diffdrive_arduino/wheel.hpp\n'}
+[3.551099] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/launch/view_robot.launch.py\n'}
+[3.559586] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/ros2_control/diffbot.ros2_control.xacro\n'}
+[3.569764] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot.materials.xacro\n'}
+[3.578832] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot.urdf.xacro\n'}
+[3.587250] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/urdf/diffbot_description.urdf.xacro\n'}
+[3.596036] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/rviz/diffbot.rviz\n'}
+[3.604510] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/rviz/diffbot_view.rviz\n'}
+[3.613415] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/launch/diffbot.launch.py\n'}
+[3.614649] (-) TimerEvent: {}
+[3.627340] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/config/diffbot_controllers.yaml\n'}
+[3.638013] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/environment/library_path.sh\n'}
+[3.649329] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/environment/library_path.dsv\n'}
+[3.659727] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/ament_index/resource_index/package_run_dependencies/diffdrive_arduino\n'}
+[3.668756] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/ament_index/resource_index/parent_prefix_path/diffdrive_arduino\n'}
+[3.677198] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/environment/ament_prefix_path.sh\n'}
+[3.686069] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/environment/ament_prefix_path.dsv\n'}
+[3.695605] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/environment/path.sh\n'}
+[3.704454] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/environment/path.dsv\n'}
+[3.713795] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.bash\n'}
+[3.714777] (-) TimerEvent: {}
+[3.723515] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.sh\n'}
+[3.732770] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.zsh\n'}
+[3.742542] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/local_setup.dsv\n'}
+[3.751381] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/package.dsv\n'}
+[3.760112] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/ament_index/resource_index/packages/diffdrive_arduino\n'}
+[3.769328] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/diffdrive_arduino\n'}
+[3.778765] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.789610] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.800028] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/cmake/diffdrive_arduinoConfig.cmake\n'}
+[3.809289] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/cmake/diffdrive_arduinoConfig-version.cmake\n'}
+[3.814873] (-) TimerEvent: {}
+[3.820432] (diffdrive_arduino) StdoutLine: {'line': b'-- Symlinking: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/package.xml\n'}
+[3.831894] (diffdrive_arduino) StdoutLine: {'line': b'-- Installing: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/lib/libdiffdrive_arduino.so\n'}
+[3.832763] (diffdrive_arduino) StdoutLine: {'line': b'-- Set runtime path of "/home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/lib/libdiffdrive_arduino.so" to ""\n'}
+[3.832861] (diffdrive_arduino) StdoutLine: {'line': b'-- Installing: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/cmake/export_diffdrive_arduinoExport.cmake\n'}
+[3.833280] (diffdrive_arduino) StdoutLine: {'line': b'-- Installing: /home/cuong/diffdrive_arduino-humble/install/diffdrive_arduino/share/diffdrive_arduino/cmake/export_diffdrive_arduinoExport-noconfig.cmake\n'}
+[3.835973] (diffdrive_arduino) CommandEnded: {'returncode': 0}
+[3.855080] (diffdrive_arduino) JobEnded: {'identifier': 'diffdrive_arduino', 'rc': 0}
+[3.855733] (-) EventReactorShutdown: {}

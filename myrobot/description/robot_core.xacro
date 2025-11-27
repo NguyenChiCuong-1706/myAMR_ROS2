@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<robot name="Cuong_MobileRobot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+  <xacro:property name="frame_ground_offset" value="0.02"/>
+  <xacro:property name="diff_wheels_radius" value="0.0501"/>
+
+  <!-- BASE LINK -->
+    <link name="base_link">
+    </link>
+
+<!-- Footprint link -->
+  <link name="base_footprint">
+  </link>
+  <joint name="base_footprint_joint" type="fixed">
+    <origin xyz="0 0 0" />
+    <parent link="base_link" />
+    <child link="base_footprint" />
+  </joint>
+
+<!-- Base link -->
+  <link name="chassis_link">
+    <visual>
+      <origin xyz="0 0 ${frame_ground_offset}" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find myrobot)/meshes//base_link.STL" />
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    
+    <inertial>
+      <origin xyz="-0.0089 0 ${frame_ground_offset + 0.0788}" rpy="0 0 0" />
+      <mass value="1.281" />
+      <inertia
+        ixx="0.0468244369690289"
+        ixy="-3.4613336007172E-06"
+        ixz="4.34454889010329E-05"
+        iyy="0.0240341123957385"
+        iyz="-1.32432557062817E-06"
+        izz="0.0664423696630811" />
+    </inertial>
+    <collision>
+      <origin xyz="0 0 ${frame_ground_offset}" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find myrobot)/meshes//base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+    <joint name="chassis_joint" type="fixed">
+    <origin xyz="0 0 0" />
+    <parent link="base_link" />
+    <child link="chassis_link" />
+  </joint>
+
+<!-- Right-Drive link -->
+  <link name="RD_link">
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0"/>
+      <geometry>
+        <mesh
+          filename="file://$(find myrobot)/meshes//RD_link.STL" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.2681" />
+      <inertia
+        ixx="0.0001926951796097"
+        ixy="8.03209264984212E-10"
+        ixz="6.3660498983915E-08"
+        iyy="0.000192675558238293"
+        iyz="2.60289310470105E-09"
+        izz="0.00032009896690558" />
+    </inertial>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <sphere radius="${diff_wheels_radius}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="RD_joint"
+    type="continuous">
+    <origin xyz="0 -0.2014 ${frame_ground_offset + 0.03}" rpy="${pi/2} 0 0" />
+    <parent link="base_link" />
+    <child link="RD_link" />
+    <axis xyz="0 0 -1" />
+  </joint>
+
+<!-- Left-Drive link -->
+  <link name="LD_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find myrobot)/meshes//LD_link.STL" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>C
+      <mass value="0.2681" />
+      <inertia
+        ixx="0.000192680084553262"
+        ixy="8.30482540674649E-09"
+        ixz="3.06619680704156E-08"
+        iyy="0.000192690653294731"
+        iyz="5.5850495946252E-08"
+        izz="0.00032009896690558" />
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <sphere radius="${diff_wheels_radius}"/>
+      </geometry>
+      </collision>
+  </link>
+
+  <joint name="LD_joint"
+    type="continuous">
+    <origin xyz="0 0.2014 ${frame_ground_offset + 0.03}" rpy="${pi/2} 0 0" />
+    <parent link="base_link" />
+    <child link="LD_link" />
+    <axis xyz="0 0 -1" />
+  </joint>
+<!-- Caster links -->
+  <!-- Back-Right-Caster link -->
+
+  <link name="BRC_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find myrobot)/meshes//BRC_link.STL" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+
+    <inertial>
+      <origin xyz="0.0048 0.0081 0" rpy="0 0 0"/>
+      <mass value="0.0284"/>
+      <inertia
+        ixx="3.94774719095158E-06"
+        ixy="-2.92353662392493E-07"
+        ixz="-7.18479870958837E-11"
+        iyy="4.24152605662568E-06"
+        iyz="-8.83598650868593E-12"
+        izz="5.71387977555985E-06"/>
+    </inertial>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find myrobot)/meshes//BRC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="BRC_joint" type="fixed">
+    <origin xyz="-0.1666 -0.12 ${frame_ground_offset}" rpy="${pi/2} 0 0" />
+    <parent link="base_link" />
+    <child link="BRC_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  
+  <!-- Back-Left-Caster link -->
+
+  <link name="BLC_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find myrobot)/meshes//BLC_link.STL" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <inertial>
+      <origin xyz="0.0048 0.0081 0" rpy="0 0 0"/>
+      <mass value="0.0284"/>
+      <inertia
+        ixx="3.94774719095158E-06"
+        ixy="-2.92353662392493E-07"
+        ixz="-7.18479870958837E-11"
+        iyy="4.24152605662568E-06"
+        iyz="-8.83598650868593E-12"
+        izz="5.71387977555985E-06"/>
+    </inertial>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find myrobot)/meshes//BLC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="BLC_joint" type="fixed">
+    <origin xyz="-0.1666 0.12 ${frame_ground_offset}" rpy="${pi/2} 0 0" />
+    <parent link="base_link" />
+    <child link="BLC_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  
+  <!-- Front-Right-Caster link -->
+  <link name="FRC_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find myrobot)/meshes//FRC_link.STL" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <inertial>
+      <origin xyz="0.0048 0.0081 0" rpy="0 0 0"/>
+      <mass value="0.0284"/>
+      <inertia
+        ixx="3.94774719095158E-06"
+        ixy="-2.92353662392493E-07"
+        ixz="-7.18479870958837E-11"
+        iyy="4.24152605662568E-06"
+        iyz="-8.83598650868593E-12"
+        izz="5.71387977555985E-06"/>
+    </inertial>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find myrobot)/meshes//FRC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="FRC_joint"
+    type="fixed">
+    <origin xyz="0.1233 -0.12 ${frame_ground_offset}" rpy="${pi/2} 0 0" />
+    <parent link="base_link" />
+    <child link="FRC_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  
+  <!-- Front-Left-Caster link -->
+  <link name="FLC_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find myrobot)/meshes//FLC_link.STL" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <inertial>
+      <origin xyz="0.0048 0.0081 0" rpy="0 0 0"/>
+      <mass value="0.0284"/>
+      <inertia
+        ixx="3.94774719095158E-06"
+        ixy="-2.92353662392493E-07"
+        ixz="-7.18479870958837E-11"
+        iyy="4.24152605662568E-06"
+        iyz="-8.83598650868593E-12"
+        izz="5.71387977555985E-06"/>
+    </inertial>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find myrobot)/meshes//FLC_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="FLC_joint" type="fixed">
+    <origin xyz="0.1233 0.12 ${frame_ground_offset}" rpy="${pi/2} 0 0" />
+    <parent link="base_link" />
+    <child link="FLC_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+<!-- Sensor links  -->
+  <!-- Lidar_link -->
+  <link name="Lidar_link">
+    <inertial>
+      <origin xyz="0.0039 0 ${frame_ground_offset-0.0055}" rpy="0 0 0" />
+      <mass value="0.1654" />
+      <inertia
+        ixx="7.88658059973056E-05"
+        ixy="4.83601286757989E-08"
+        ixz="2.18507688491495E-06"
+        iyy="7.51891529441991E-05"
+        iyz="2.8831474631393E-08"
+        izz="0.00010994637923249" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 ${frame_ground_offset}" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find myrobot)/meshes//Lidar_link.STL" />
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 ${frame_ground_offset}" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find myrobot)/meshes//Lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="Lidar_joint"
+    type="fixed">
+    <origin xyz="-0.0044 0 0.2498" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="Lidar_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+<!-- Colors macros -->
+  <material name="white">
+    <color rgba="1 1 1 1" />
+  </material>
+
+  <material name="gray">
+    <color rgba="0.5 0.5 0.5 1"/>
+  </material>
+
+  <material name="blue">
+    <color rgba="0.2 0.2 1 1"/>
+  </material>
+
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+
+</robot>

@@ -1,0 +1,11 @@
+twist_mux:
+  ros__parameters:
+    topics:
+      navigation:
+        topic   : cmd_vel   # This is where teleop keyboard publishes
+        timeout : 0.5
+        priority: 10
+      # teleop:
+      #   topic   : diff_cont/cmd_vel_unstamped   # Ensure this is the teleop topic
+      #   timeout : 0.5
+      #   priority: 100       # Give it a higher priority
