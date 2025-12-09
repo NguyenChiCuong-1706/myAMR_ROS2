@@ -1,0 +1,28 @@
+sudo nano ~/.bashrc
+
+/cmd_vel_unstamped
+
+pkill gzserver
+pkill gzclient
+
+rviz2 -d ~/myproject/ros2_ws/src/myrobot/config/myrobot.rviz
+
+// Slam_toolbox
+ros2 launch slam_toolbox online_async_launch.py slam_params_file:=./src/myrobot/config/mapper_params_online_async.yaml use_sim_time:=true
+
+// full_simulation launch
+ros2 launch myrobot launch_sim.launch.py
+
+// teleop_keyboard:
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_cont/cmd_vel_unstamped
+
+// Twist_mux node:
+ros2 run twist_mux twist_mux --ros-args --params-file ./src/myrobot/config/twist_mux.yaml -r cmd_vel_out:=diff_cont/cmd_vel_unstamped
+
+// NAVIGATION - nav2:
+ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true
+
+
+ros2 run plotjuggler plotjuggler
+	
