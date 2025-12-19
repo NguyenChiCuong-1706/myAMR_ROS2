@@ -2,7 +2,7 @@
   <world name='mywarehouse'>
     <light name='sun' type='directional'>
       <cast_shadows>1</cast_shadows>
-      <pose>0 0 10 0 -0 0</pose>
+      <pose>6 10 10 0 -0 0</pose>
       <diffuse>0.8 0.8 0.8 1</diffuse>
       <specular>0.2 0.2 0.2 1</specular>
       <attenuation>
@@ -319,7 +319,7 @@
     </model>
     <light name='skysun' type='directional'>
       <cast_shadows>1</cast_shadows>
-      <pose>0.033325 -0.169013 10 0 -0 0</pose>
+      <pose>-6 -9 10 0 -0 0</pose>
       <diffuse>0.8 0.8 0.8 1</diffuse>
       <specular>0.2 0.2 0.2 1</specular>
       <attenuation>

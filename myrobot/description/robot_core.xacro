@@ -313,6 +313,50 @@
     <axis xyz="0 0 0" />
   </joint>
 
+    <!-- Camera link -->
+  <link name="camera_link">
+    <inertial>
+      <origin xyz="0.0039 0 ${frame_ground_offset-0.0055}" rpy="0 0 0" />
+      <mass value="0.1654" />
+      <inertia
+        ixx="7.88658059973056E-05"
+        ixy="4.83601286757989E-08"
+        ixz="2.18507688491495E-06"
+        iyy="7.51891529441991E-05"
+        iyz="2.8831474631393E-08"
+        izz="0.00010994637923249" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 ${frame_ground_offset}" rpy="0 0 0" />
+      <geometry>
+        <box size="0.010 0.03 0.03"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 ${frame_ground_offset}" rpy="0 0 0" />
+      <geometry>
+        <box size="0.010 0.03 0.03"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="camera_joint"
+    type="fixed">
+    <origin xyz="-0.18 0 0.15" rpy="0 0 ${pi}" />
+    <parent link="base_link" />
+    <child link="camera_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <joint name="camera_optical_joint" type="fixed">
+      <parent link="camera_link"/>
+      <child link="camera_link_optical"/>
+      <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+  </joint>
+
+  <link name="camera_link_optical"></link>
+
 <!-- Colors macros -->
   <material name="white">
     <color rgba="1 1 1 1" />

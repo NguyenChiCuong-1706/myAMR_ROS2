@@ -14,7 +14,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
     package_name='myrobot'
-    gazebo_params_file = os.path.join(get_package_share_directory(package_name), 'config', 'gazebo_params.yaml')
+    # gazebo_params_file = os.path.join(get_package_share_directory(package_name), 'config', 'gazebo_params.yaml')
     robot_localization_params_file = os.path.join(get_package_share_directory(package_name), 'config', 'robot_localization_param.yaml')
     world_path = os.path.join(get_package_share_directory(package_name), 'worlds', 'warehouse.world')
 
@@ -74,5 +74,5 @@ def generate_launch_description():
         diff_drive_spawner,
         joint_broad_spawner,
 
-        ekf_localization_odom
+        # ekf_localization_odom
     ])

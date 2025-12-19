@@ -17,6 +17,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
     package_name='myrobot' 
+    robot_localization_params_file = os.path.join(get_package_share_directory(package_name), 'config', 'robot_localization_param.yaml')
 
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
@@ -62,9 +63,18 @@ def generate_launch_description():
         )
     )
 
+    ekf_localization_odom= Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_localization_odom',
+        output='screen',
+        parameters=[robot_localization_params_file]
+    )
+
     return LaunchDescription([
         rsp,
         delayed_controller_manager,
         delayed_diff_drive_spawner,
-        delayed_joint_broad_spawner
+        delayed_joint_broad_spawner,
+        ekf_localization_odom
     ])
